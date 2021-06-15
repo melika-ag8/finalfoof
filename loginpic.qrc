@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/loginpic">
+        <file>shutterstock_145160614.jpg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,23 @@
+#include "signin.h"
+#include "ui_signin.h"
+#include <mainwindow.h>
+
+signin::signin(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::signin)
+{
+    ui->setupUi(this);
+}
+
+signin::~signin()
+{
+    delete ui;
+}
+
+void signin::on_cancel_clicked()
+{
+    MainWindow * c = new MainWindow (this);
+    c->show();
+    hide();
+}
+

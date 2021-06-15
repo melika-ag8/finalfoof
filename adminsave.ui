@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>adminsave</class>
+ <widget class="QMainWindow" name="adminsave">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuadd_and_delete_products">
+    <property name="title">
+     <string>add and delete products</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuadd_new_group_of_products">
+    <property name="title">
+     <string>add new group of products</string>
+    </property>
+   </widget>
+   <addaction name="menuedit"/>
+   <addaction name="menuadd_and_delete_products"/>
+   <addaction name="menuadd_new_group_of_products"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

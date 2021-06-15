@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>shutterstock_145160614.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix2">
+        <file>30efd6106389187.5f8ef54dd51df.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix3">
+        <file>consum-supermarket-branding-cul-de-sac_dezeen_2364_col_4.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix4">
+        <file>abstract.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix5">
+        <file>credit-cards-mockup-top-view_1332-3085.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix6">
+        <file>635707340795374751-kroger.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix7">
+        <file>a9fscjcjqfvhehtvvgpfghrkhdi74syp8ae5sjkiyfi3u7qm7b6ulglanhmwcf5w-.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix8">
+        <file>login.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix9">
+        <file>edit.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix10">
+        <file>addel.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix11">
+        <file>AdobeStock_272406819.jpg</file>
+    </qresource>
+</RCC>
