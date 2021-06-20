@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/new/prefix1">
-        <file>shutterstock_145160614.jpg</file>
+        <file>unnamed.png</file>
     </qresource>
     <qresource prefix="/new/prefix2">
         <file>30efd6106389187.5f8ef54dd51df.jpg</file>
@@ -27,7 +27,7 @@
         <file>edit.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix10">
-        <file>add.jpg</file>
+        <file>welcom.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix11">
         <file>AdobeStock_272406819.jpg</file>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>delete</class>
- <widget class="QDialog" name="delete">
+ <class>deletepg</class>
+ <widget class="QDialog" name="deletepg">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -37,12 +37,24 @@
    <property name="styleSheet">
     <string notr="true">#back
 {
-	border-image: url(:/new/prefix10/add.jpg);
+	border-image: url(:/new/prefix1/unnamed.png);
 }</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>700</width>
+        <height>600</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">color:white;</string>
       </property>
@@ -52,10 +64,10 @@
       <widget class="QWidget" name="verticalWidget_4" native="true">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>30</y>
+         <x>0</x>
+         <y>20</y>
          <width>661</width>
-         <height>541</height>
+         <height>531</height>
         </rect>
        </property>
        <property name="sizePolicy">
@@ -185,7 +197,7 @@
             <item>
              <widget class="QTableWidget" name="show">
               <property name="styleSheet">
-               <string notr="true">color:black;</string>
+               <string notr="true">textcolor:black;</string>
               </property>
               <column>
                <property name="text">
@@ -240,7 +252,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextBrowser" name="name_2">
+           <widget class="QTextBrowser" name="name">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -269,7 +281,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextBrowser" name="group_2">
+           <widget class="QTextBrowser" name="group">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -292,7 +304,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextBrowser" name="textBrowser">
+           <widget class="QTextBrowser" name="company">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -321,7 +333,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextBrowser" name="supply_2">
+           <widget class="QTextBrowser" name="supply">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -350,7 +362,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QTextBrowser" name="price_2">
+           <widget class="QTextBrowser" name="price">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -415,6 +427,16 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="exit">
+            <property name="styleSheet">
+             <string notr="true">color:black;</string>
+            </property>
+            <property name="text">
+             <string>exit</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -428,19 +450,6 @@
            </spacer>
           </item>
          </layout>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
         </item>
        </layout>
       </widget>

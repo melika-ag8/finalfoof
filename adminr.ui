@@ -68,6 +68,7 @@
     </property>
     <addaction name="actionEdit_product"/>
     <addaction name="actionadd_and_delete_product"/>
+    <addaction name="actiondelete_products_with_groups"/>
     <addaction name="actionchange_delivery_price"/>
    </widget>
    <widget class="QMenu" name="menusearch">
@@ -75,7 +76,6 @@
      <string>search and show</string>
     </property>
     <addaction name="actionamong_products"/>
-    <addaction name="actionamong_products_group"/>
    </widget>
    <widget class="QMenu" name="menubuy">
     <property name="title">
@@ -94,17 +94,12 @@
   </action>
   <action name="actionadd_and_delete_product">
    <property name="text">
-    <string>add and delete products and products group </string>
+    <string>add and delete products with grpups</string>
    </property>
   </action>
   <action name="actionamong_products">
    <property name="text">
-    <string>among products</string>
-   </property>
-  </action>
-  <action name="actionamong_products_group">
-   <property name="text">
-    <string>among products group</string>
+    <string>search</string>
    </property>
   </action>
   <action name="actionbuy">
@@ -114,7 +109,12 @@
   </action>
   <action name="actionchange_delivery_price">
    <property name="text">
-    <string>change delivery price</string>
+    <string>change delivery price and admin code</string>
+   </property>
+  </action>
+  <action name="actiondelete_products_with_groups">
+   <property name="text">
+    <string>delete products with groups</string>
    </property>
   </action>
  </widget>

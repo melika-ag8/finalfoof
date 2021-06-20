@@ -1,6 +1,5 @@
 #include "memberr.h"
 #include "ui_memberr.h"
-#include <msearchg.h>
 #include <msearchp.h>
 #include <mbuy.h>
 
@@ -20,13 +19,6 @@ void memberr::on_showp_clicked()
 {
     msearchp * mp = new msearchp (this) ;
     mp->show();
-    hide();
-}
-
-void memberr::on_showg_clicked()
-{
-    msearchg * mg = new msearchg (this) ;
-    mg->show();
     hide();
 }
 

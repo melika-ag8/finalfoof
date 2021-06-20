@@ -16,9 +16,10 @@ public:
     ~msearchp();
 
 private slots:
-    void on_cancel_clicked();
 
-    void on_searchline_3_textChanged(const QString &arg1);
+    void on_searchline_textChanged(const QString &arg1);
+
+    void on_cancel_clicked();
 
 private:
     Ui::msearchp *ui;

@@ -208,17 +208,22 @@
            <widget class="QTableWidget" name="show">
             <column>
              <property name="text">
-              <string>product</string>
+              <string> product name</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>New Column</string>
+              <string>group name</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>group</string>
+              <string>company</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>price</string>
              </property>
             </column>
             <column>
@@ -286,6 +291,29 @@
       </item>
       <item>
        <widget class="QTextBrowser" name="group">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>company</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="company">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -428,7 +456,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>delivery (worth 5 dollars)?</string>
+         <string>delivery?</string>
         </property>
        </widget>
       </item>
@@ -513,7 +541,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>10</width>
+          <width>85</width>
           <height>20</height>
          </size>
         </property>
@@ -594,7 +622,7 @@
       <item>
        <widget class="QPushButton" name="cancel">
         <property name="text">
-         <string>cancel</string>
+         <string>exit</string>
         </property>
        </widget>
       </item>

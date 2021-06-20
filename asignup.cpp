@@ -30,6 +30,8 @@ public:
     QStringList email ;
 };
 
+int admincode = 789 ;
+
 void asignup::on_save_clicked()
 {
     admin admin ;
@@ -57,6 +59,11 @@ void asignup::on_save_clicked()
         if ( this->ui->userline->text() == admin.user[i] )
         {
             QMessageBox::information(this, "" , "you can not choose this username" );
+            break;
+        }
+        else if ( this->ui->acodeline->text().toInt() != admincode )
+        {
+            QMessageBox::information(this, "" , "you are not the admin" );
             break;
         }
         else

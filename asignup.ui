@@ -154,7 +154,11 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLineEdit" name="userline"/>
+           <widget class="QLineEdit" name="userline">
+            <property name="placeholderText">
+             <string>enter your username without any space</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>

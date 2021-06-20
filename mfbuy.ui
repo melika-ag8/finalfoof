@@ -379,16 +379,16 @@
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="finish">
+         <widget class="QPushButton" name="reload">
           <property name="text">
-           <string>buy</string>
+           <string>reload</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="cancel">
+         <widget class="QPushButton" name="finish">
           <property name="text">
-           <string>cancel</string>
+           <string>buy</string>
           </property>
          </widget>
         </item>

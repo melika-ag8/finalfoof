@@ -17,9 +17,9 @@ public:
 
 private slots:
 
-    void on_cancel_clicked();
-
     void on_finish_clicked();
+
+    void on_reload_clicked();
 
 private:
     Ui::mfbuy *ui;

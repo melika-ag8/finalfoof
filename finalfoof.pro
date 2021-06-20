@@ -11,14 +11,13 @@ CONFIG += c++11
 SOURCES += \
     abuy.cpp \
     achange.cpp \
-    add.cpp \
+    adminadd.cpp \
     adminr.cpp \
     afbuy.cpp \
     asearchg.cpp \
-    asearchp.cpp \
     asignin.cpp \
     asignup.cpp \
-    delete.cpp \
+    deletepg.cpp \
     edit.cpp \
     finish.cpp \
     main.cpp \
@@ -27,7 +26,6 @@ SOURCES += \
     mchange.cpp \
     memberr.cpp \
     mfbuy.cpp \
-    msearchg.cpp \
     msearchp.cpp \
     msignin.cpp \
     msignup.cpp
@@ -35,14 +33,13 @@ SOURCES += \
 HEADERS += \
     abuy.h \
     achange.h \
-    add.h \
+    adminadd.h \
     adminr.h \
     afbuy.h \
     asearchg.h \
-    asearchp.h \
     asignin.h \
     asignup.h \
-    delete.h \
+    deletepg.h \
     edit.h \
     finish.h \
     mainwindow.h \
@@ -50,7 +47,6 @@ HEADERS += \
     mchange.h \
     memberr.h \
     mfbuy.h \
-    msearchg.h \
     msearchp.h \
     msignin.h \
     msignup.h
@@ -58,14 +54,13 @@ HEADERS += \
 FORMS += \
     abuy.ui \
     achange.ui \
-    add.ui \
+    adminadd.ui \
     adminr.ui \
     afbuy.ui \
     asearchg.ui \
-    asearchp.ui \
     asignin.ui \
     asignup.ui \
-    delete.ui \
+    deletepg.ui \
     edit.ui \
     finish.ui \
     mainwindow.ui \
@@ -73,7 +68,6 @@ FORMS += \
     mchange.ui \
     memberr.ui \
     mfbuy.ui \
-    msearchg.ui \
     msearchp.ui \
     msignin.ui \
     msignup.ui

@@ -17,13 +17,13 @@ public:
 
 private slots:
 
-    void on_cancel_clicked();
+    void on_searchline_textChanged(const QString &arg1);
 
     void on_reload_clicked();
 
-    void on_searchline_textChanged(const QString &arg1);
+    void on_change_clicked();
 
-    void on_finish_clicked();
+    void on_cancel_clicked();
 
 private:
     Ui::edit *ui;

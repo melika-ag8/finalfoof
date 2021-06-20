@@ -322,6 +322,29 @@
        </widget>
       </item>
       <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>company</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="company">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="label_3">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -603,7 +626,7 @@
       <item>
        <widget class="QPushButton" name="cancel">
         <property name="text">
-         <string>cancel</string>
+         <string>exit</string>
         </property>
        </widget>
       </item>

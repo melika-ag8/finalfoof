@@ -18,8 +18,6 @@ public:
 private slots:
     void on_showp_clicked();
 
-    void on_showg_clicked();
-
     void on_buy_clicked();
 
 private:

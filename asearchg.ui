@@ -110,6 +110,50 @@
             <number>5</number>
            </property>
            <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>search based on :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="product">
+               <property name="text">
+                <string>product name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="group">
+               <property name="text">
+                <string>product group</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="company">
+               <property name="text">
+                <string>product company</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <property name="leftMargin">
               <number>5</number>
@@ -211,12 +255,17 @@
                 </property>
                 <column>
                  <property name="text">
-                  <string>group</string>
+                  <string>product name</string>
                  </property>
                 </column>
                 <column>
                  <property name="text">
                   <string>product</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>company</string>
                  </property>
                 </column>
                 <column>

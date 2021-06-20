@@ -24,51 +24,51 @@ mfbuy::~mfbuy()
 class account
 {
 public:
-  QStringList fullname ;
-  QStringList phone ;
-  QStringList backemail ;
-  QStringList address ;
-  QStringList credit ;
+    QStringList fullname ;
+    QStringList phone ;
+    QStringList backemail ;
+    QStringList address ;
+    QStringList credit ;
 };
 
 void mfbuy::on_finish_clicked()
 {
-        finish * f = new finish (this);
-        f->show();
-        hide();
+    finish * f = new finish (this);
+    f->show();
+    hide();
 
-        account account ;
+    account account ;
 
-        QFile file("e:/memberaccount.txt");
+    QFile file("e:/memberaccount.txt");
 
-        file.open( QFile::Append | QFile::WriteOnly );
+    file.open( QFile::Append | QFile::WriteOnly );
 
-        QTextStream s(&file);
+    QTextStream s(&file);
 
-        s << this->ui->fullnameline->text() << " " << this->ui->phoneline->text() << " " << this->ui->backline->text() << " "
-          << this->ui->addressline->text() << " " << this->ui->creditline->text() << endl ;
+    s << this->ui->fullnameline->text() << " " << this->ui->phoneline->text() << " " << this->ui->backline->text() << " "
+      << this->ui->addressline->text() << " " << this->ui->creditline->text() << endl ;
 
-        file.close();
+    file.close();
 
-        file.open( QFile::Text | QFile::ReadOnly );
+    file.open( QFile::Text | QFile::ReadOnly );
 
-        while (!s.atEnd())
-        {
-            QStringList a = s.readLine().split(' ');
-            account.fullname.append(a[0]);
-            account.phone.append(a[1]);
-            account.backemail.append(a[2]);
-            account.address.append(a[3]);
-            account.credit.append(a[4]);
-        }
+    while (!s.atEnd())
+    {
+        QStringList a = s.readLine().split(' ');
+        account.fullname.append(a[0]);
+        account.phone.append(a[1]);
+        account.backemail.append(a[2]);
+        account.address.append(a[3]);
+        account.credit.append(a[4]);
+    }
 
-        file.close();
-
+    file.close();
 }
-
-void mfbuy::on_cancel_clicked()
+void mfbuy::on_reload_clicked()
 {
-        mbuy * c = new mbuy (this);
-        c->show();
-        hide();
+    this->ui->fullnameline->clear();
+    this->ui->addressline->clear();
+    this->ui->backline->clear();
+    this->ui->addressline->clear();
+    this->ui->creditline->clear();
 }

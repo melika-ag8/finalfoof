@@ -133,7 +133,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/new/prefix1/shutterstock_145160614.jpg);</string>
+     <string notr="true">border-image: url(:/new/prefix10/welcom.jpg);</string>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout"/>
    </widget>

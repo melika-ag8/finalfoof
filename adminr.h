@@ -18,15 +18,16 @@ public:
     ~adminr();
 
 private slots:
-    void on_actionamong_products_triggered();
-
-    void on_actionamong_products_group_triggered();
 
     void on_actionbuy_triggered();
 
     void on_actionEdit_product_triggered();
 
     void on_actionadd_and_delete_product_triggered();
+
+    void on_actiondelete_products_with_groups_triggered();
+
+    void on_actionamong_products_triggered();
 
 private:
     Ui::adminr *ui;

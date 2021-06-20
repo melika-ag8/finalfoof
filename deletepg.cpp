@@ -1,6 +1,5 @@
-#include "abuy.h"
-#include "ui_abuy.h"
-#include <afbuy.h>
+#include "deletepg.h"
+#include "ui_deletepg.h"
 #include <adminr.h>
 
 #include <QFile>
@@ -8,15 +7,17 @@
 #include <QTextStream>
 #include <QString>
 #include <QMessageBox>
+#include <QList>
+#include <QDebug>
 
-abuy::abuy(QWidget *parent) :
+deletepg::deletepg(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::abuy)
+    ui(new Ui::deletepg)
 {
     ui->setupUi(this);
 }
 
-abuy::~abuy()
+deletepg::~deletepg()
 {
     delete ui;
 }
@@ -31,58 +32,7 @@ public:
     QStringList price ;
 };
 
-void abuy::on_buy_clicked()
-{
-    afbuy * afb = new afbuy (this);
-    afb->show();
-    hide();
-
-    products products ;
-
-    QFile file("e:/products.txt");
-
-    QTextStream s(&file);
-
-    file.open( QFile::Text | QFile::ReadOnly );
-
-    while (!s.atEnd())
-    {
-        QStringList a = s.readLine().split(' ');
-        products.name.append(a[0]);
-        products.group.append(a[1]);
-        products.company.append(a[2]);
-        products.supply.append(a[3]);
-        products.price.append(a[4]);
-    }
-
-    file.close();
-
-    for (int i = 0 ; i < products.name.size() ; i++ )
-    {
-        if ( this->ui->name->toPlainText() == products.name[i] )
-        {
-            QString s = QString::number( products.supply[i].toUInt() - this->ui->needline->text().toUInt());
-            products.supply[i] = s ;
-            break;
-        }
-    }
-
-    file.open( QFile::Text | QFile::WriteOnly );
-
-    for (int i = 0 ; i < products.name.size() ; i++ )
-    {
-        s << products.name[i] << " " << products.group[i] << " " << products.company[i] << " " << products.supply[i] << " " << products.price[i] << endl ;
-    }
-}
-
-void abuy::on_cancel_clicked()
-{
-    adminr * c = new adminr (this);
-    c->show();
-    hide();
-}
-
-void abuy::on_searchline_textChanged(const QString & m )
+void deletepg::on_searchline_textChanged(const QString & m )
 {
     int r = 0 ;
 
@@ -146,7 +96,24 @@ void abuy::on_searchline_textChanged(const QString & m )
     }
 }
 
-void abuy::on_show_cellDoubleClicked(int row, int column)
+void deletepg::on_reload_2_clicked()
+{
+    this->ui->name->clear();
+    this->ui->group->clear();
+    this->ui->company->clear();
+    this->ui->supply->clear();
+    this->ui->price->clear();
+}
+
+
+void deletepg::on_exit_clicked()
+{
+    adminr * e = new adminr (this);
+    e->show();
+    hide();
+}
+
+void deletepg::on_show_cellDoubleClicked(int row, int column)
 {
     products products ;
 
@@ -171,19 +138,55 @@ void abuy::on_show_cellDoubleClicked(int row, int column)
 
     this->ui->name->setText( products.name[i] );
     this->ui->group->setText( products.group[i] );
+    this->ui->company->setText(products.company[i]);
     this->ui->supply->setText( products.supply[i] );
     this->ui->price->setText( products.price[i] );
-    this->ui->company->setText( products.company[i] );
+
 }
 
-void abuy::on_yes_clicked()
+void deletepg::on_delete_2_clicked()
 {
-    QString p = QString::number( ( this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) + 5 ) ;
-    this->ui->totalpriceline->setText( p );
-}
+    products products ;
 
-void abuy::on_no_clicked()
-{
-    QString p = QString::number( (this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) ) ;
-    this->ui->totalpriceline->setText( p );
+    QFile file("e:/products.txt");
+
+    QTextStream s(&file);
+
+    file.open( QFile::Text | QFile::ReadOnly );
+
+    while (!s.atEnd())
+    {
+        QStringList a = s.readLine().split(' ');
+        products.name.append( a[0]);
+        products.group.append( a[1]);
+        products.company.append(a[2]);
+        products.supply.append(a[3]);
+        products.price.append(a[4]);
+    }
+
+    for (int i = 0 ; i < products.name.size() ; i++ )
+    {
+        if ( this->ui->searchline->text() == products.name[i] )
+        {
+            QString s = products.name[i];
+            products.name.removeOne(s) ;
+            products.group.removeOne(s);
+            products.company.removeOne(s);
+            products.supply.removeOne(s);
+            products.price.removeOne(s);
+
+            break;
+        }
+    }
+
+    file.close();
+
+    file.open( QFile::Text | QFile::WriteOnly );
+
+    for (int i = 0 ; i < products.name.size() ; i++ )
+    {
+        s << products.name[i] << " " << products.group[i] << " " << products.company[i] << " " << products.supply[i] << " " << products.price[i] << endl ;
+    }
+
+    QMessageBox::information(this, "" , "delete successfully" );
 }
