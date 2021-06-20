@@ -25,7 +25,9 @@ private slots:
 
     void on_show_cellDoubleClicked(int row, int column);
 
-    void on_calculate_clicked();
+    void on_yes_clicked();
+
+    void on_no_clicked();
 
 private:
     Ui::abuy *ui;

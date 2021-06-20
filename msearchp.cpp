@@ -37,8 +37,11 @@ void msearchp::on_cancel_clicked()
     hide();
 }
 
-void msearchp::on_enter_clicked()
+
+void msearchp::on_searchline_3_textChanged(const QString & m )
 {
+    int r = 0 ;
+
     products products ;
 
     QFile file("e:/products.txt");
@@ -56,16 +59,41 @@ void msearchp::on_enter_clicked()
         products.price.append(a[3]);
     }
 
-    for (int i = 0 ; i < products.name.size() ; i++ )
+    for (int i = 0 ; i < 20 ; ++i )
     {
-        if ( this->ui->searchline->text() == products.name[i] )
+        for (int i = 0 ; i < 20 ; ++i )
         {
-            this->ui->nameline->setText( products.name[i] );
-            this->ui->groupline->setText( products.group[i] );
-            this->ui->supplyline->setText( products.supply[i] );
-            this->ui->priceline->setText( products.price[i] );
+            ui->show3->removeRow(i);
+        }
+    }
 
-            break;
+    for (int i = 0 ; i <  products.name.size() ; i++ )
+    {
+        QString f = products.name[i] ;
+        if ( f.contains( m ) )
+        {
+            this->ui->show3->insertRow(r);
+            QTableWidgetItem * group = new QTableWidgetItem ;
+            QTableWidgetItem * name = new QTableWidgetItem ;
+            QTableWidgetItem * supply = new QTableWidgetItem ;
+            QTableWidgetItem * price = new QTableWidgetItem ;
+
+            group->setText(products.group[i]);
+            name->setText(products.name[i]);
+            supply->setText(products.supply[i]);
+            price->setText(products.price[i]);
+
+            group->setTextAlignment(Qt::AlignCenter);
+            name->setTextAlignment(Qt::AlignCenter);
+            supply->setTextAlignment(Qt::AlignCenter);
+            price->setTextAlignment(Qt::AlignCenter);
+
+            this->ui->show3->setItem(r,0,name);
+            this->ui->show3->setItem(r,1,group);
+            this->ui->show3->setItem(r,2,supply);
+            this->ui->show3->setItem(r,3,price);
+
+            r++;
         }
     }
 }

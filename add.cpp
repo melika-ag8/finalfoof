@@ -1,4 +1,4 @@
-#include "addel.h"
+#include "add.h"
 #include "ui_addel.h"
 #include <adminr.h>
 

@@ -27,7 +27,7 @@
         <file>edit.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix10">
-        <file>addel.jpg</file>
+        <file>add.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix11">
         <file>AdobeStock_272406819.jpg</file>

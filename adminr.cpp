@@ -5,7 +5,7 @@
 
 #include <abuy.h>
 #include <edit.h>
-#include <addel.h>
+#include <add.h>
 
 adminr::adminr(QWidget *parent) :
     QMainWindow(parent),

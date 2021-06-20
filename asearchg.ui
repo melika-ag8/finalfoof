@@ -85,7 +85,7 @@
           <string notr="true">color:black;</string>
          </property>
          <property name="title">
-          <string>                                            to see everything please enter a word and then delete it</string>
+          <string>                                            to see everything please enter a letter and then delete it</string>
          </property>
          <widget class="QWidget" name="verticalLayoutWidget">
           <property name="geometry">

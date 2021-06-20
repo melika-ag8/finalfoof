@@ -20,9 +20,15 @@ private slots:
 
     void on_cancel_clicked();
 
-    void on_enter_clicked();
-
     void on_calculate_clicked();
+
+    void on_searchline_textChanged(const QString &arg1);
+
+    void on_show_cellDoubleClicked(int row, int column);
+
+    void on_YES_clicked();
+
+    void on_no_clicked();
 
 private:
     Ui::mbuy *ui;

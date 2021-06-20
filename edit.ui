@@ -260,12 +260,17 @@
             </property>
             <column>
              <property name="text">
-              <string>product</string>
+              <string>product name</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>group</string>
+              <string>group name</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>company</string>
              </property>
             </column>
             <column>

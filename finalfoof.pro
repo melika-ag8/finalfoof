@@ -11,13 +11,14 @@ CONFIG += c++11
 SOURCES += \
     abuy.cpp \
     achange.cpp \
-    addel.cpp \
+    add.cpp \
     adminr.cpp \
     afbuy.cpp \
     asearchg.cpp \
     asearchp.cpp \
     asignin.cpp \
     asignup.cpp \
+    delete.cpp \
     edit.cpp \
     finish.cpp \
     main.cpp \
@@ -34,13 +35,14 @@ SOURCES += \
 HEADERS += \
     abuy.h \
     achange.h \
-    addel.h \
+    add.h \
     adminr.h \
     afbuy.h \
     asearchg.h \
     asearchp.h \
     asignin.h \
     asignup.h \
+    delete.h \
     edit.h \
     finish.h \
     mainwindow.h \
@@ -56,13 +58,14 @@ HEADERS += \
 FORMS += \
     abuy.ui \
     achange.ui \
-    addel.ui \
+    add.ui \
     adminr.ui \
     afbuy.ui \
     asearchg.ui \
     asearchp.ui \
     asignin.ui \
     asignup.ui \
+    delete.ui \
     edit.ui \
     finish.ui \
     mainwindow.ui \

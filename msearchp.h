@@ -18,7 +18,7 @@ public:
 private slots:
     void on_cancel_clicked();
 
-    void on_enter_clicked();
+    void on_searchline_3_textChanged(const QString &arg1);
 
 private:
     Ui::msearchp *ui;

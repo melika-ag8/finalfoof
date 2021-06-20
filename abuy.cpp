@@ -44,14 +44,9 @@ void abuy::on_cancel_clicked()
     hide();
 }
 
-void abuy::on_calculate_clicked()
-{
-    QString p = QString::number( this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble() ) ;
-    this->ui->totalpriceline->setText( p );
-}
-
 void abuy::on_searchline_textChanged(const QString & m )
-{int r = 0 ;
+{
+    int r = 0 ;
 
     products products ;
 
@@ -80,23 +75,34 @@ void abuy::on_searchline_textChanged(const QString & m )
 
     for (int i = 0 ; i <  products.name.size() ; i++ )
     {
-        QString f = products.name[i] ;
+        QString f = products.group[i] ;
         if ( f.contains( m ) )
         {
             this->ui->show->insertRow(r);
+            QTableWidgetItem * group = new QTableWidgetItem ;
             QTableWidgetItem * name = new QTableWidgetItem ;
+            QTableWidgetItem * supply = new QTableWidgetItem ;
+            QTableWidgetItem * price = new QTableWidgetItem ;
 
+            group->setText(products.group[i]);
             name->setText(products.name[i]);
+            supply->setText(products.supply[i]);
+            price->setText(products.price[i]);
+
+            group->setTextAlignment(Qt::AlignCenter);
             name->setTextAlignment(Qt::AlignCenter);
+            supply->setTextAlignment(Qt::AlignCenter);
+            price->setTextAlignment(Qt::AlignCenter);
 
             this->ui->show->setItem(r,0,name);
+            this->ui->show->setItem(r,1,group);
+            this->ui->show->setItem(r,2,supply);
+            this->ui->show->setItem(r,3,price);
 
             r++;
         }
     }
-
 }
-
 
 void abuy::on_show_cellDoubleClicked(int row, int column)
 {
@@ -125,4 +131,16 @@ void abuy::on_show_cellDoubleClicked(int row, int column)
     this->ui->supply->setText( products.supply[i] );
     this->ui->price->setText( products.price[i] );
 
+}
+
+void abuy::on_yes_clicked()
+{
+    QString p = QString::number( (this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) + 5 ) ;
+    this->ui->totalpriceline->setText( p );
+}
+
+void abuy::on_no_clicked()
+{
+    QString p = QString::number( (this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) ) ;
+    this->ui->totalpriceline->setText( p );
 }

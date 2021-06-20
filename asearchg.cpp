@@ -57,9 +57,6 @@ void asearchg::on_searchline_textChanged(const QString & m )
         products.price.append(a[3]);
     }
 
-
-
-
     for (int i = 0 ; i < 20 ; ++i )
     {
         for (int i = 0 ; i < 20 ; ++i )
