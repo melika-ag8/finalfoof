@@ -32,4 +32,7 @@
     <qresource prefix="/new/prefix11">
         <file>AdobeStock_272406819.jpg</file>
     </qresource>
+    <qresource prefix="/new/prefix12">
+        <file>chinfo.jpg</file>
+    </qresource>
 </RCC>

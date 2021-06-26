@@ -56,7 +56,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:white;</string>
+       <string notr="true"/>
       </property>
       <property name="title">
        <string>delete product</string>
@@ -139,7 +139,7 @@
                </sizepolicy>
               </property>
               <property name="styleSheet">
-               <string notr="true">color:black;</string>
+               <string notr="true"/>
               </property>
               <property name="text">
                <string>search</string>
@@ -161,7 +161,7 @@
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">color:black;</string>
+               <string notr="true"/>
               </property>
              </widget>
             </item>
@@ -197,7 +197,7 @@
             <item>
              <widget class="QTableWidget" name="show">
               <property name="styleSheet">
-               <string notr="true">textcolor:black;</string>
+               <string notr="true"/>
               </property>
               <column>
                <property name="text">
