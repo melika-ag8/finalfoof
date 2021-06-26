@@ -46,7 +46,7 @@ void asearchg::on_searchline_textChanged(const QString & m )
 
         products products ;
 
-        QFile file("e:/products.txt");
+        QFile file("products.txt");
 
         QTextStream s(&file);
 
@@ -109,7 +109,7 @@ void asearchg::on_searchline_textChanged(const QString & m )
 
         products products ;
 
-        QFile file("e:/products.txt");
+        QFile file("products.txt");
 
         QTextStream s(&file);
 
@@ -172,7 +172,7 @@ void asearchg::on_searchline_textChanged(const QString & m )
 
         products products ;
 
-        QFile file("e:/products.txt");
+        QFile file("products.txt");
 
         QTextStream s(&file);
 

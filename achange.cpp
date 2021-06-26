@@ -34,7 +34,7 @@ void achange::on_change_clicked()
 {
     admin admin ;
 
-    QFile file("e:/admin.txt");
+    QFile file("admin.txt");
 
     QTextStream d(&file);
 

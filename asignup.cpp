@@ -36,7 +36,7 @@ void asignup::on_save_clicked()
 {
     admin admin ;
 
-    QFile file("e:/admin.txt");
+    QFile file("admin.txt");
 
     QTextStream s(&file);
 
@@ -54,31 +54,43 @@ void asignup::on_save_clicked()
 
     file.close();
 
+    bool adminc = true ;
+    bool name = true ;
+
     for (int i = 0 ; i < admin.user.size() ; i++ )
     {
-        if ( this->ui->userline->text() == admin.user[i] )
+        if ( this->ui->acodeline->text().toInt() != admincode )
         {
-            QMessageBox::information(this, "" , "you can not choose this username" );
+            adminc = false ;
             break;
         }
-        else if ( this->ui->acodeline->text().toInt() != admincode )
+        else if ( this->ui->userline->text() == admin.user[i] )
         {
-            QMessageBox::information(this, "" , "you are not the admin" );
-            break;
-        }
-        else
-        {
-            file.open( QFile::Append | QFile::WriteOnly );
-
-            s << this->ui->userline->text() << " " << this->ui->passline->text() << " " << this->ui->acodeline->text() << " "
-              << this->ui->codeline->text() << " " << this->ui->emailline->text() << endl ;
-
-            adminr * r = new adminr (this);
-            r->show();
-            hide();
+            name = false ;
             break;
         }
     }
+
+    if ( adminc == false )
+    {
+        QMessageBox::information(this, "" , "you are not the admin" );
+    }
+    else if ( name == false )
+    {
+        QMessageBox::information(this, "" , "you can not choose this username" );
+    }
+    else
+    {
+        file.open( QFile::Append | QFile::WriteOnly );
+
+        s << this->ui->userline->text() << " " << this->ui->passline->text() << " " << this->ui->acodeline->text() << " "
+          << this->ui->codeline->text() << " " << this->ui->emailline->text() << endl ;
+
+        adminr * r = new adminr (this);
+        r->show();
+        hide();
+    }
+
 }
 
 void asignup::on_cancel_clicked()

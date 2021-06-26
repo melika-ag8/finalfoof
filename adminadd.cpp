@@ -37,7 +37,7 @@ void adminadd::on_add_clicked()
 {
     products products ;
 
-    QFile file("e:/products.txt");
+    QFile file("products.txt");
 
     file.open( QFile::Append | QFile::WriteOnly );
 

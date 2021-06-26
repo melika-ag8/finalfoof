@@ -33,7 +33,7 @@ void mchange::on_change_clicked()
 {
     member member ;
 
-    QFile file("e:/member.txt");
+    QFile file("member.txt");
 
     QTextStream d(&file);
 

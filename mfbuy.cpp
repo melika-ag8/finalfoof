@@ -39,7 +39,7 @@ void mfbuy::on_finish_clicked()
 
     account account ;
 
-    QFile file("e:/memberaccount.txt");
+    QFile file("memberaccount.txt");
 
     file.open( QFile::Append | QFile::WriteOnly );
 

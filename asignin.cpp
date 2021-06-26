@@ -51,7 +51,7 @@ void asignin::on_save_clicked()
 {
     admin admin ;
 
-    QFile file("e:/admin.txt");
+    QFile file("admin.txt");
 
     QTextStream d(&file);
 

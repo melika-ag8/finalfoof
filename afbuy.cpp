@@ -47,7 +47,7 @@ void afbuy::on_done_clicked()
 
     account account ;
 
-    QFile file("e:/adminaccount.txt");
+    QFile file("adminaccount.txt");
 
     file.open( QFile::Append | QFile::WriteOnly );
 

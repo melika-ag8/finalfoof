@@ -41,7 +41,7 @@ void msignup::on_save_clicked()
 {
     member member ;
 
-    QFile file("e:/member.txt");
+    QFile file("member.txt");
 
     QTextStream s(&file);
 

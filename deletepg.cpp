@@ -38,7 +38,7 @@ void deletepg::on_searchline_textChanged(const QString & m )
 
     products products ;
 
-    QFile file("e:/products.txt");
+    QFile file("products.txt");
 
     QTextStream s(&file);
 
@@ -117,7 +117,7 @@ void deletepg::on_show_cellDoubleClicked(int row, int column)
 {
     products products ;
 
-    QFile file("e:/products.txt");
+    QFile file("products.txt");
 
     QTextStream s(&file);
 
@@ -148,7 +148,7 @@ void deletepg::on_delete_2_clicked()
 {
     products products ;
 
-    QFile file("e:/products.txt");
+    QFile file("products.txt");
 
     QTextStream s(&file);
 
