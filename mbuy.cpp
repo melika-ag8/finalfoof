@@ -185,10 +185,24 @@ void mbuy::on_YES_clicked()
 {
     QString p = QString::number( (this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) + 5 ) ;
     this->ui->totalpriceline->setText( p );
+
+    QFile file("productbuy.txt");
+    QTextStream d(&file);
+
+    file.open( QFile::Append | QFile::WriteOnly );
+    d << this->ui->name->toPlainText() << " " << this->ui->price->toPlainText() << " "
+      << this->ui->needline->text() << " " << " delivery yes" << " " << this->ui->totalpriceline->toPlainText() << endl;
 }
 
 void mbuy::on_no_clicked()
 {
     QString p = QString::number( (this->ui->needline->text().toUInt() * this->ui->price->toPlainText().toDouble()) ) ;
     this->ui->totalpriceline->setText( p );
+
+    QFile file("productbuy.txt");
+    QTextStream d(&file);
+
+    file.open( QFile::Append | QFile::WriteOnly );
+    d << this->ui->name->toPlainText() << " " << this->ui->price->toPlainText() << " "
+      << this->ui->needline->text() << " " << " delivery no" << " " << this->ui->totalpriceline->toPlainText() << endl;
 }
