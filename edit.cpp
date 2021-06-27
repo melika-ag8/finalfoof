@@ -99,6 +99,11 @@ void edit::on_searchline_textChanged(const QString & m )
 void edit::on_reload_clicked()
 {
     this->ui->searchline->clear();
+    this->ui->newname->clear();
+    this->ui->newgroup->clear();
+    this->ui->newcompany->clear();
+    this->ui->newsupply->clear();
+    this->ui->newprice->clear();
 }
 
 void edit::on_change_clicked()
@@ -142,7 +147,8 @@ void edit::on_change_clicked()
 
     for (int i = 0 ; i < products.name.size() ; i++ )
     {
-        s << products.name[i] << " " << products.group[i] << " " << products.company[i] << " " << products.supply[i] << " " << products.price[i] << endl ;
+        s << products.name[i] << " " << products.group[i] << " " << products.company[i]
+             << " " << products.supply[i] << " " << products.price[i] << endl ;
     }
 }
 
@@ -151,4 +157,10 @@ void edit::on_cancel_clicked()
     adminr * c = new adminr (this);
     c->show();
     hide();
+}
+
+void edit::on_show_cellDoubleClicked(int row, int column)
+{
+    QString t = this->ui->show->item(row,0)->text() ;
+    this->ui->searchline->setText(t) ;
 }

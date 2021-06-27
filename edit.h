@@ -25,6 +25,8 @@ private slots:
 
     void on_cancel_clicked();
 
+    void on_show_cellDoubleClicked(int row, int column);
+
 private:
     Ui::edit *ui;
 };

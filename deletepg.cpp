@@ -166,7 +166,7 @@ void deletepg::on_delete_2_clicked()
 
     for (int i = 0 ; i < products.name.size() ; i++ )
     {
-        if ( this->ui->searchline->text() == products.name[i] )
+        if ( this->ui->name->toPlainText() == products.name[i] )
         {
             QString s = products.name[i];
             products.name.removeOne(s) ;
@@ -185,7 +185,8 @@ void deletepg::on_delete_2_clicked()
 
     for (int i = 0 ; i < products.name.size() ; i++ )
     {
-        s << products.name[i] << " " << products.group[i] << " " << products.company[i] << " " << products.supply[i] << " " << products.price[i] << endl ;
+        s << products.name[i] << " " << products.group[i] << " " << products.company[i] << " " << products.supply[i]
+             << " " << products.price[i] << endl ;
     }
 
     QMessageBox::information(this, "" , "delete successfully" );

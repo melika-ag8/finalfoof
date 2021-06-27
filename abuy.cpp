@@ -88,7 +88,7 @@ void abuy::on_searchline_textChanged(const QString & m )
 
     products products ;
 
-    QFile file(" products.txt");
+    QFile file("products.txt");
 
     QTextStream s(&file);
 
