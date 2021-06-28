@@ -199,7 +199,7 @@
             <string notr="true">color:black;</string>
            </property>
            <property name="placeholderText">
-            <string>enter the name wirh no space</string>
+            <string>enter the name with no space</string>
            </property>
           </widget>
          </item>

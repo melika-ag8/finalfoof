@@ -104,7 +104,7 @@
      <item>
       <widget class="QLabel" name="member">
        <property name="text">
-        <string>memberl</string>
+        <string>member</string>
        </property>
       </widget>
      </item>
