@@ -221,7 +221,7 @@
               </column>
               <column>
                <property name="text">
-                <string>price</string>
+                <string>price $</string>
                </property>
               </column>
              </widget>

@@ -228,7 +228,7 @@
             </column>
             <column>
              <property name="text">
-              <string>price</string>
+              <string>price $</string>
              </property>
             </column>
            </widget>
@@ -366,7 +366,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>  price</string>
+         <string>  price $</string>
         </property>
        </widget>
       </item>
@@ -527,7 +527,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>total price</string>
+         <string>total price $</string>
         </property>
        </widget>
       </item>
@@ -541,7 +541,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>85</width>
+          <width>75</width>
           <height>20</height>
          </size>
         </property>

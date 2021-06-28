@@ -280,7 +280,7 @@
             </column>
             <column>
              <property name="text">
-              <string>price</string>
+              <string>price $</string>
              </property>
             </column>
            </widget>
@@ -580,7 +580,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>new price</string>
+             <string>new price $</string>
             </property>
            </widget>
           </item>

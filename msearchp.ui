@@ -35,7 +35,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>products groups</string>
+    <string>products</string>
    </property>
    <widget class="QWidget" name="back1" native="true">
     <property name="geometry">
@@ -260,7 +260,7 @@
                 </column>
                 <column>
                  <property name="text">
-                  <string>product</string>
+                  <string>group name</string>
                  </property>
                 </column>
                 <column>
@@ -275,7 +275,7 @@
                 </column>
                 <column>
                  <property name="text">
-                  <string>price</string>
+                  <string>price $</string>
                  </property>
                 </column>
                </widget>

@@ -503,7 +503,7 @@
             <string notr="true">color:black;</string>
            </property>
            <property name="text">
-            <string> price      </string>
+            <string> price $   </string>
            </property>
           </widget>
          </item>
@@ -531,9 +531,12 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
+             <width>210</width>
              <height>20</height>
             </size>
            </property>
