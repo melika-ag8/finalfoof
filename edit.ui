@@ -366,6 +366,9 @@
            <string notr="true">color:black;
 </string>
           </property>
+          <property name="placeholderText">
+           <string>with no space</string>
+          </property>
          </widget>
         </item>
        </layout>
@@ -414,6 +417,9 @@
           <property name="styleSheet">
            <string notr="true">color:black;</string>
           </property>
+          <property name="placeholderText">
+           <string>with no space</string>
+          </property>
          </widget>
         </item>
        </layout>
@@ -461,6 +467,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">color:black;</string>
+          </property>
+          <property name="placeholderText">
+           <string>with no space</string>
           </property>
          </widget>
         </item>

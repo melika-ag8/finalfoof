@@ -206,6 +206,18 @@
           </property>
           <item>
            <widget class="QTableWidget" name="show">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>620</width>
+              <height>250</height>
+             </size>
+            </property>
             <column>
              <property name="text">
               <string> product name</string>
