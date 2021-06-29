@@ -305,7 +305,11 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="addressline"/>
+         <widget class="QLineEdit" name="addressline">
+          <property name="placeholderText">
+           <string>enter your address with \ instead of space</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
